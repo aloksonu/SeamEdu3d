@@ -406,6 +406,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d8de756eb96c045a8f5cbf6d9780fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Animator: {fileID: 851395570}
+  _buttonIdle: {fileID: 1994123531}
+  _buttonRun: {fileID: 1699265940}
+  _buttonJump: {fileID: 1366352619}
 --- !u!4 &414414122
 Transform:
   m_ObjectHideFlags: 0
@@ -708,6 +712,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &851395570 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 4f4c1a6417aa2884fae381598e689007,
+    type: 3}
+  m_PrefabInstance: {fileID: 1736113983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1045702814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,7 +1432,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4f4c1a6417aa2884fae381598e689007,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.54
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f4c1a6417aa2884fae381598e689007,
         type: 3}
@@ -1432,7 +1442,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4f4c1a6417aa2884fae381598e689007,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f4c1a6417aa2884fae381598e689007,
         type: 3}
@@ -1442,7 +1452,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4f4c1a6417aa2884fae381598e689007,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f4c1a6417aa2884fae381598e689007,
         type: 3}
@@ -1457,7 +1467,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4f4c1a6417aa2884fae381598e689007,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f4c1a6417aa2884fae381598e689007,
         type: 3}
