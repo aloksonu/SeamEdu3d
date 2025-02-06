@@ -13,7 +13,7 @@ public class ModelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _Animator.SetTrigger("Idle");
+        //_Animator.SetTrigger("Idle");
         //_Animator.Play("Idle");
         _buttonIdle.onClick.AddListener(PlayIdle);
         _buttonRun.onClick.AddListener(PlayRun);
@@ -22,22 +22,40 @@ public class ModelManager : MonoBehaviour
     private void OnDestroy()
     {
         _buttonIdle.onClick.RemoveAllListeners();
-        _buttonIdle.onClick.RemoveAllListeners();
+        _buttonRun.onClick.RemoveAllListeners();
+        _buttonJump.onClick.AddListener(PlayJump);
     }
     private void PlayIdle()
     {
-        _Animator.SetTrigger("Idle");
+        _Animator.Play("Idle", 0, 0);
+
+
         //_Animator.Play("Idle");
+        //_Animator.CrossFade("Idle", 0.1f,0);
+        //_Animator.ResetTrigger("Jump");
+        //_Animator.ResetTrigger("Run");
+        //_Animator.SetTrigger("Idle");
     }
     private void PlayJump()
     {
-        //_Animator.SetTrigger("Jump");
+        _Animator.Play("Jump", 0, 0);
+
         //_Animator.Play("Jump");
+        //_Animator.CrossFade("Jump", 0.1f,0);
+        //_Animator.ResetTrigger("Idle");
+        //_Animator.ResetTrigger("Run");
+        //_Animator.SetTrigger("Jump");
     }
     private void PlayRun()
     {
-        _Animator.SetTrigger("Run");
-        //_Animator.Play("Drunk Run Forward");
+        _Animator.Play("Run", 0, 0);
+ 
+
+        //_Animator.Play("Run");
+        //_Animator.CrossFade("Run", 0.1f, 0);
+        //_Animator.ResetTrigger("Idle");
+        //_Animator.ResetTrigger("Jump");
+        //_Animator.SetTrigger("Run");
     }
 
 }
