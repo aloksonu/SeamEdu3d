@@ -28,20 +28,29 @@ public class BallController : MonoBehaviour
             rb.velocity = new Vector3(speed, 0, 0);
             started = true;
         }
+
+        Debug.DrawRay(this.transform.position, Vector3.down, Color.red);
+
+        if(!Physics.Raycast(this.transform.position, Vector3.down, 1)){
+            gameOver = true;
+            rb.velocity = new Vector3(0,-25,0);
+            Camera.main.GetComponent<CameraFollow>().gameOver = gameOver;
+        }
+
         if (Input.GetMouseButtonDown(0) && !gameOver) {
             SwitchDirection();
         } 
     }
 
-    private void SwitchDirection()
+   private void SwitchDirection()
+{
+    if (rb.velocity.z < 0)
     {
-        if (rb.velocity.z > 0)
-        {
-            rb.velocity = new Vector3(speed, 0, 0);
-        }
-        else if (rb.velocity.x > 0)
-        {
-            rb.velocity = new Vector3(0, 0, speed);
-        }
+        rb.velocity = new Vector3(speed, 0, 0); // Move in -X
     }
+    else if (rb.velocity.x < 0)
+    {
+        rb.velocity = new Vector3(0, 0, speed); // Move in -Z
+    }
+}
 }
